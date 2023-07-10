@@ -1,0 +1,40 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Corredor {
+  id: ID!
+  identificacion: String!
+  nombre: String!
+  peso: String!
+  edad: [String!]
+  estado: Boolean!
+}
+
+type Query {
+  corredors: [Corredor!]!
+  corredor(id: ID!): Corredor!
+}
+
+type Mutation {
+  createMascota(createCorredorInput: CreateCorredorInput!): Corredor!
+  updateEstudiante(updateCorredorInput: UpdateCorredorInput!): Corredor!
+  removeEstudiante(id: ID!): Corredor!
+}
+
+input CreateCorredorInput {
+  identificacion: String!
+  nombre: String!
+  peso: String!
+  edad: [String!]
+  estado: Boolean!
+}
+
+input UpdateCorredorInput {
+  identificacion: String
+  nombre: String
+  peso: String
+  edad: [String!]
+  estado: Boolean
+  id: ID!
+}
